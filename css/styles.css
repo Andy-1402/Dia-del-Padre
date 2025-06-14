@@ -102,13 +102,14 @@ body {
   border: 2px dashed #1e90ff;
   padding: 30px;
   border-radius: 12px;
-  width: 90%;
+  width: 100%;
   max-width: 700px;
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
   white-space: pre-line;
   font-size: 1.1rem;
   color: #333;
   text-align: center;
+  position: relative;
 }
 
 .corner-videos.hidden {
@@ -133,24 +134,53 @@ body {
 .bottom-left { bottom: 10px; left: 10px; }
 .bottom-right{ bottom: 10px; right: 10px; }
 
-
-
-.message {
-  position: relative; 
-}
-
 .hydrangea-img {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  width: 125px;    /* Ajusta tamaño según prefieras */
+  width: 100px;
   height: auto;
-  pointer-events: none; 
+  max-width: 30%;
+  pointer-events: none;
   user-select: none;
-  opacity: 0.85; 
+  opacity: 0.85;
   transition: opacity 0.3s ease;
 }
 
 .hydrangea-img:hover {
-  opacity: 1; /* Pequeño efecto hover opcional */
+  opacity: 1;
+}
+
+/* Responsive ajustes para móviles */
+@media (max-width: 576px) {
+  .hydrangea-img {
+    width: 70px;
+    bottom: 5px;
+    right: 5px;
+  }
+
+  .typing-header {
+    font-size: 1.8rem;
+  }
+
+  .envelope {
+    width: 150px;
+    height: 90px;
+  }
+
+  .seal {
+    width: 35px;
+    height: 35px;
+  }
+
+  .message {
+    padding: 20px;
+    font-size: 1rem;
+  }
+
+  .corner-video {
+    width: 100px;
+    height: 70px;
+    border-radius: 12px;
+  }
 }

@@ -22,7 +22,6 @@ function showCornerVideos() {
   document.getElementById("cornerVideos").classList.remove("hidden");
 }
 
-
 window.addEventListener("load", () => {
   const music = document.getElementById("bg-music");
   music.play().catch(() => {
@@ -31,7 +30,6 @@ window.addEventListener("load", () => {
     }, { once: true });
   });
 });
-
 
 function createConfetti() {
   const confetti = document.createElement('div');
@@ -45,7 +43,6 @@ function createConfetti() {
 }
 setInterval(createConfetti, 150);
 
-
 document.addEventListener("mousemove", (e) => {
   const x = (e.clientX / window.innerWidth - 0.5) * 10;
   const y = (e.clientY / window.innerHeight - 0.5) * 10;
@@ -53,4 +50,3 @@ document.addEventListener("mousemove", (e) => {
     video.style.transform = `translate(${x}px, ${y}px)`;
   });
 });
-
